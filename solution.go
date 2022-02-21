@@ -2,9 +2,15 @@ package solution
 
 import "math"
 
-type Sidenum int
+type SidesNum int
 
-func CalcSquare(sideLen float64, sidesNum Sidenum) float64 {
+const (
+	SidesTriangle SidesNum = 3
+	SidesSquare   SidesNum = 4
+	SidesCircle   SidesNum = 0
+)
+
+func CalcSquare(sideLen float64, sidesNum SidesNum) float64 {
 	if sidesNum == 3 {
 		return (sideLen * sideLen * math.Sqrt(3) / 4)
 	} else if sidesNum == 4 {
